@@ -6,13 +6,13 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 09:33:10 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/21 09:33:17 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/21 09:38:08 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	int		len;
 	char	*result;

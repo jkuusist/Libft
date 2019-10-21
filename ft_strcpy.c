@@ -6,11 +6,11 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 09:32:21 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/21 09:32:31 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/21 09:38:19 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strcpy(char *dst, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 
