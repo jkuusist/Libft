@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 10:35:06 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/23 16:22:46 by jkuusist         ###   ########.fr       */
+/*   Created: 2019/10/23 13:53:33 by jkuusist          #+#    #+#             */
+/*   Updated: 2019/10/23 16:21:52 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memalloc(size_t size)
 {
 	size_t			i;
+	unsigned char	*res;
 
-	if (n != 0)
+	i = 0;
+	if (size == 0)
+		return (0);
+	res = malloc(size);
+	if (!res)
+		return (0);
+	while (i < size)
 	{
-		i = 0;
-		while (i < n)
-		{
-			((unsigned char *)s)[i] = 0;
-			i++;
-		}
+		res[i] = 0;
+		i++;
 	}
+	return ((void*)res);
 }
