@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 11:19:32 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/24 13:14:28 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/24 13:37:46 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,6 @@ void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *));
 
 #endif
