@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 13:08:32 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/21 14:44:59 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/24 14:38:29 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	ch;
+	size_t			i;
+	unsigned char	ch;
 
-	i = (int)ft_strlen(s) - 1;
-	ch = (char)c;
+	i = ft_strlen(s);
+	ch = (unsigned char)c;
 	while (i >= 0)
 	{
 		if (s[i] == ch)
 		{
-			return (char *)(s);
+			return (char *)(&s[i]);
 		}
 		i--;
 	}
