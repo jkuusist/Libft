@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 11:32:48 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/22 12:28:37 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/25 16:04:44 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		((unsigned char*)dst)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (&(dst[i]));
+	return (dst);
 }
