@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 11:19:32 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/25 13:23:26 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/25 13:31:39 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,7 @@ char	*ft_strtrim(char const *s);
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
+
 
 #endif
