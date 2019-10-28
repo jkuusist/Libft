@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 14:11:57 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/28 14:04:48 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/28 14:59:34 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,6 @@ static int	is_whitespace(char c)
 	if ((c == ' ') || (c == '\t'))
 		return (1);
 	if ((c == '\n') || (c == '\v') || (c == '\f') || (c == '\r'))
-		return (1);
-	else
-		return (0);
-}
-
-static int	is_number(char c)
-{
-	if ((c >= '0') && (c <= '9'))
 		return (1);
 	else
 		return (0);
@@ -45,7 +37,7 @@ int			ft_atoi(const char *str)
 	}
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	while (is_number(str[i]))
+	while (((str[i] >= '0') && (str[i] <= '9')))
 	{
 		res = res * 10 + (str[i] - '0');
 		i++;
