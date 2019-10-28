@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 14:11:57 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/22 16:50:06 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/28 14:04:48 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ int			ft_atoi(const char *str)
 	if (str[i] == '-')
 	{
 		sign = -1;
-		i++;
 	}
+	if (str[i] == '-' || str[i] == '+')
+		i++;
 	while (is_number(str[i]))
 	{
 		res = res * 10 + (str[i] - '0');
