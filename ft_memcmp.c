@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 13:53:23 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/22 14:07:44 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/29 13:42:16 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
 		i++;
 	}
-	return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
+	return (0);
 }
