@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:43:58 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/28 11:09:55 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/30 12:31:40 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,22 @@ static int	numlen(int num)
 char		*ft_itoa(int n)
 {
 	int		i;
-	int		sign;
 	char	*res;
 
 	i = numlen(n);
 	if (!(res = malloc(sizeof(char*) * (i + 1))))
 		return (0);
+	if ((n == 0) || (n == -0))
+	{
+		ft_strcpy(res, "0");
+		return (res);
+	}
 	if (n == -2147483648)
 	{
 		ft_strcpy(res, "-2147483648\0");
 		return (res);
 	}
-	if ((sign = n) < 0)
+	if (n < 0)
 	{
 		n = -n;
 		res[0] = '-';
