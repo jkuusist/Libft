@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 15:45:42 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/24 16:13:45 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/30 16:53:12 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	*ft_strmap(char const *s, char (*f)(char))
 		res[i] = (*f)(s[i]);
 		i++;
 	}
+	res[i] = '\0';
 	return (res);
 }
