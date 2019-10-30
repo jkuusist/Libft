@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:25:57 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/25 14:35:43 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/30 13:53:33 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	int i;
 
+	if (n == -2147483648)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
 	if (n < 0)
 	{
 		i = -n;
@@ -23,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	else
 		i = n;
-	if ((n / 10) > 0)
-		ft_putnbr_fd(n / 10, fd);
-	ft_putchar_fd((n % 10) + 48, fd);
+	if ((i / 10) > 0)
+		ft_putnbr_fd((i / 10), fd);
+	ft_putchar_fd(((i % 10) + 48), fd);
 }
