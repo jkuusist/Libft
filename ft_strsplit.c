@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 11:14:06 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/28 15:47:09 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/28 15:51:26 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,7 @@ char		**ft_strsplit(char const *s, char c)
 			if (!(res[i] = malloc(sizeof(char) * (wordlen(s, c) + 1))))
 				return (0);
 			while ((*s != c) && (*s != '\0'))
-			{
-				res[i][j] = *s;
-				j++;
-				s++;
-			}
+				res[i][j++] = *s++;
 			res[i][j] = '\0';
 			i++;
 			j = 0;
