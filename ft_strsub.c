@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 17:23:48 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/24 17:59:17 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/31 10:43:37 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char			*res;
 
 	i = 0;
-	res = malloc(sizeof(char) * len);
+	res = (char*)(malloc(sizeof(char) * len));
 	if (!res)
 		return (0);
 	while (i < len)

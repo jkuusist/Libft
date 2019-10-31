@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 09:33:10 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/30 16:21:47 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/31 10:34:27 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s1)
 	{
 		len++;
 	}
-	result = malloc(len * sizeof(s1));
+	result = (char*)(malloc(len * sizeof(s1)));
 	if (!result)
 		return (0);
 	len = 0;

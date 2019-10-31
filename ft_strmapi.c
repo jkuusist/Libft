@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/24 16:18:39 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/24 16:34:35 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/31 10:41:13 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*res;
 
 	i = 0;
-	res = malloc(sizeof(char*) * ft_strlen(s));
+	res = (char*)(malloc(sizeof(char*) * ft_strlen(s)));
 	if (!res)
 		return (0);
 	while (s[i] != '\0')
