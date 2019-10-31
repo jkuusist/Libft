@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:43:58 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/31 10:48:43 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/31 15:08:45 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char			*ft_itoa(int n)
 	char			*res;
 
 	i = numlen(n);
-	if (!(res = (char*)(malloc(sizeof(char*) * (i + 1)))))
+	if (!(res = (char*)(malloc(sizeof(char) * (i + 1)))))
 		return (0);
 	if ((n == 0) || (n == -0) || (n == -2147483648))
 	{
