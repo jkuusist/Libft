@@ -6,35 +6,36 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 12:30:14 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/22 13:16:11 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/31 13:57:02 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdlib.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*charsrc;
-	char	*chardest;
+	char	*chardst;
 	size_t	i;
-	char	*temp;
 
 	charsrc = (char*)src;
-	chardest = (char*)dst;
-	i = 0;
-	temp = (char*)malloc(len);
-	while (i < len)
+	chardst = (char*)dst;
+	if (src == dst)
+		return (dst);
+	if (chardst < charsrc)
 	{
-		temp[i] = charsrc[i];
-		i++;
+		i = 0;
+		while (i < len)
+		{
+			chardst[i] = charsrc[i];
+			i++;
+		}
 	}
-	i = 0;
-	while (i < len)
+	else
 	{
-		chardest[i] = temp[i];
-		i++;
+		i = len;
+		while (i-- > 0)
+			chardst[i] = charsrc[i];
 	}
-	free(temp);
 	return (dst);
 }
