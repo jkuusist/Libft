@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 13:53:33 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/31 10:38:23 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/10/31 10:53:55 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memalloc(size_t size)
 	i = 0;
 	if (size == 0)
 		return (0);
-	res = (char*)(malloc(size));
+	res = (unsigned char*)(malloc(size));
 	if (!res)
 		return (0);
 	while (i < size)
