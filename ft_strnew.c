@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 16:46:39 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/31 10:39:17 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/01 14:03:13 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnew(size_t size)
 	char	*res;
 
 	i = 0;
-	res = (char*)(malloc(sizeof(char*) * size));
+	res = (char*)(malloc(sizeof(char) * size + 1));
 	if (!res)
 		return (0);
 	while (i < size)
