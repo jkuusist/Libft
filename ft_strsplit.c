@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 11:14:06 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/31 10:59:08 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:34:37 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char		**ft_strsplit(char const *s, char c)
 	int		j;
 	char	**res;
 
+	if (!s)
+		return (0);
 	i = 0;
 	j = 0;
 	if (!(res = (char**)(malloc(sizeof(char*) * (wordcount(s, c) + 1)))))

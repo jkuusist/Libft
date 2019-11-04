@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:23:16 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/31 15:18:45 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:34:02 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char			*ft_strtrim(char const *s)
 	int		i;
 	char	*res;
 
+	if (!s)
+		return (0);
 	start = 0;
 	end = ft_strlen(s);
 	i = 0;
