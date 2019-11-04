@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 14:32:54 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/11/01 15:44:07 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/04 13:57:57 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,18 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		if (!content)
+		{
 			new->content = NULL;
+			new->content_size = 0;
+		}
 		else
-			new->content = (void*)content;
-		new->content_size = 0;
+		{
+			new->content = malloc(sizeof(content));
+			if (!(new->content))
+				return (0);
+			ft_memcpy((new->content), content, content_size);
+			new->content_size = content_size;
+		}
 		new->next = NULL;
 	}
 	return (new);
