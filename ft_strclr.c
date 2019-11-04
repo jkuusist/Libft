@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 17:02:13 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/23 17:16:23 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/04 17:25:38 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_strclr(char *s)
 {
 	size_t i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
