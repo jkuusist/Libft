@@ -6,16 +6,13 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 12:40:39 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/23 12:45:56 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:57:38 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isascii(int c)
 {
-	unsigned char ch;
-
-	ch = (unsigned char)c;
-	if (ch >= 0 && ch <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

@@ -6,17 +6,14 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 13:45:27 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/23 13:47:32 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:58:42 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_tolower(int c)
 {
-	unsigned char ch;
-
-	ch = (unsigned char)c;
-	if (ch >= 'A' && ch <= 'Z')
-		return (ch + 32);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
 	else
-		return (ch);
+		return (c);
 }

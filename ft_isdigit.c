@@ -6,16 +6,13 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 11:34:53 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/10/23 11:36:35 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/05 11:56:55 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_isdigit(int c)
 {
-	unsigned char ch;
-
-	ch = (unsigned char)c;
-	if (ch >= '0' && ch <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
