@@ -6,19 +6,16 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 13:14:00 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/11/04 17:35:39 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/07 16:30:33 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr(char const *s)
 {
 	if (!s)
 		return ;
-	while (*s != '\0')
-	{
-		ft_putchar(*s);
-		s++;
-	}
+	write(1, s, ft_strlen(s));
 }

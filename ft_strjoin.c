@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:24 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/11/05 12:57:31 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/07 12:17:55 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (0);
-	res = (char*)(malloc(sizeof(char*) * (ft_strlen(s1) + ft_strlen(s2))));
+	res = (char*)(malloc(sizeof(char*) * (ft_strlen(s1) + ft_strlen(s2) + 1)));
 	if (!res)
 		return (0);
 	ft_strcpy(res, s1);

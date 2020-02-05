@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/01 14:32:54 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/11/04 13:57:57 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/07 12:04:20 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *new;
 
-	new = malloc(sizeof(t_list));
+	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
 	else

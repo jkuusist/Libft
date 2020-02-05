@@ -6,7 +6,7 @@
 /*   By: jkuusist <jkuusist@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:23:16 by jkuusist          #+#    #+#             */
-/*   Updated: 2019/11/04 17:34:02 by jkuusist         ###   ########.fr       */
+/*   Updated: 2019/11/07 12:03:38 by jkuusist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char			*ft_strtrim(char const *s)
 		end--;
 	while (is_whitespace(s[end]) && (end > 0))
 		end--;
-	if (!s || (start >= end))
+	if (!s || (start > end))
 	{
 		if (!(res = (char*)(malloc(sizeof(char) * (ft_strlen(s) + 1)))))
 			return (0);
